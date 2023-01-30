@@ -16,8 +16,8 @@ function onMouseMove(event) {
 
   coordsOutputRef.textContent = `
     Кол-во вызовов onMouseMove: ${mouseMoveCbInvocationCounter},
-    X: ${event.clientX},
-    Y:${event.clientY}
+    X:  ${event.clientX},
+    Y:  ${event.clientY}
   `;
 }
 
@@ -28,7 +28,7 @@ const inputRef = document.querySelector('.js-input');
 const outputRef = document.querySelector('.js-output');
 let inputCbInvocationCounter = 0;
 
-inputRef.addEventListener('input', _.debounce(onInputChange, 300));
+inputRef.addEventListener('input', _.debounce(onInputChange, 500));
 
 function onInputChange(event) {
   inputCbInvocationCounter += 1;
